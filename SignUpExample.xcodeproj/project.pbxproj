@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B6A2BF203B3CF7004900E9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2BE203B3CF7004900E9 /* LoginView.swift */; };
+		28B6A2C3203B3FF7004900E9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C2203B3FF7004900E9 /* Protocols.swift */; };
+		28B6A2C5203B46A3004900E9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C4203B46A3004900E9 /* Manager.swift */; };
+		28B6A2C8203B4897004900E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C7203B4897004900E9 /* API.swift */; };
+		28B6A2CB203B5022004900E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2CA203B5022004900E9 /* User.swift */; };
 		28C6E86C20337F0600D762CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6E86B20337F0600D762CB /* AppDelegate.swift */; };
 		28C6E86E20337F0600D762CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6E86D20337F0600D762CB /* ViewController.swift */; };
 		28C6E87120337F0600D762CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C6E86F20337F0600D762CB /* Main.storyboard */; };
-		28C6E87420337F0600D762CB /* SignUpExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28C6E87220337F0600D762CB /* SignUpExample.xcdatamodeld */; };
 		28C6E87620337F0600D762CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C6E87520337F0600D762CB /* Assets.xcassets */; };
 		28C6E87920337F0600D762CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C6E87720337F0600D762CB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28B6A2BE203B3CF7004900E9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		28B6A2C2203B3FF7004900E9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		28B6A2C4203B46A3004900E9 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		28B6A2C7203B4897004900E9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		28B6A2CA203B5022004900E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28C6E86820337F0600D762CB /* SignUpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C6E86B20337F0600D762CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C6E86D20337F0600D762CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28C6E87020337F0600D762CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		28C6E87320337F0600D762CB /* SignUpExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SignUpExample.xcdatamodel; sourceTree = "<group>"; };
 		28C6E87520337F0600D762CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C6E87820337F0600D762CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C6E87A20337F0600D762CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +45,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28B6A2BC203B3C8B004900E9 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2C1203B3F6A004900E9 /* Protocols */,
+				28B6A2BD203B3CD4004900E9 /* View */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		28B6A2BD203B3CD4004900E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2BE203B3CF7004900E9 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28B6A2C0203B3F26004900E9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2C4203B46A3004900E9 /* Manager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		28B6A2C1203B3F6A004900E9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2C2203B3FF7004900E9 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		28B6A2C6203B487B004900E9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2C7203B4897004900E9 /* API.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		28B6A2C9203B5017004900E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28B6A2CA203B5022004900E9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		28C6E85F20337F0600D762CB = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +113,34 @@
 		28C6E86A20337F0600D762CB /* SignUpExample */ = {
 			isa = PBXGroup;
 			children = (
+				28B6A2C9203B5017004900E9 /* Models */,
+				28B6A2C6203B487B004900E9 /* Configuration */,
+				28B6A2C0203B3F26004900E9 /* Manager */,
+				28B6A2BC203B3C8B004900E9 /* LoginScreen */,
+				28C6E8802033951900D762CB /* WelcomeScreen */,
 				28C6E86B20337F0600D762CB /* AppDelegate.swift */,
-				28C6E86D20337F0600D762CB /* ViewController.swift */,
 				28C6E86F20337F0600D762CB /* Main.storyboard */,
 				28C6E87520337F0600D762CB /* Assets.xcassets */,
 				28C6E87720337F0600D762CB /* LaunchScreen.storyboard */,
 				28C6E87A20337F0600D762CB /* Info.plist */,
-				28C6E87220337F0600D762CB /* SignUpExample.xcdatamodeld */,
 			);
 			path = SignUpExample;
+			sourceTree = "<group>";
+		};
+		28C6E8802033951900D762CB /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				28C6E88120339A9200D762CB /* View */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		28C6E88120339A9200D762CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28C6E86D20337F0600D762CB /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C6E87420337F0600D762CB /* SignUpExample.xcdatamodeld in Sources */,
+				28B6A2BF203B3CF7004900E9 /* LoginView.swift in Sources */,
 				28C6E86E20337F0600D762CB /* ViewController.swift in Sources */,
 				28C6E86C20337F0600D762CB /* AppDelegate.swift in Sources */,
+				28B6A2C3203B3FF7004900E9 /* Protocols.swift in Sources */,
+				28B6A2C8203B4897004900E9 /* API.swift in Sources */,
+				28B6A2C5203B46A3004900E9 /* Manager.swift in Sources */,
+				28B6A2CB203B5022004900E9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,19 +406,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		28C6E87220337F0600D762CB /* SignUpExample.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				28C6E87320337F0600D762CB /* SignUpExample.xcdatamodel */,
-			);
-			currentVersion = 28C6E87320337F0600D762CB /* SignUpExample.xcdatamodel */;
-			path = SignUpExample.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 28C6E86020337F0600D762CB /* Project object */;
 }
