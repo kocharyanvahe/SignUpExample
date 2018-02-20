@@ -8,26 +8,32 @@
 
 import Foundation
 
-let scheme: String = "https"
-let host: String = "poco-test.herokuapp.com"
-
 struct API {
-    static var urlComponent = URLComponents() {
-        didSet {
-            urlComponent.scheme = scheme
-            urlComponent.host = host
+    static let scheme = "https"
+    static let host = "poco-test.herokuapp.com"
+    
+    enum Endpoint {
+        case login
+        case registration
+        
+        var endpoint: String {
+            switch self {
+            case .login:
+                return "/login"
+            case .registration:
+                return "/addUser"
+            }
         }
     }
     
-    static var loginURL: URL {
-        urlComponent.path = "/login"
-        guard let url = urlComponent.url else { fatalError("Error with creation of url") }
-        return url
-    }
-    
-    static var registrationURL: URL {
-        urlComponent.path = "/addUser"
-        guard let url = urlComponent.url else { fatalError("Error with creation of url") }
+    static func createURL(endPoint: Endpoint) -> URL {
+        var urlComponent = URLComponents()
+        urlComponent.scheme = scheme
+        urlComponent.host = host
+        urlComponent.path = endPoint.endpoint
+        guard let url = urlComponent.url else {
+            fatalError("Error with creation of url.")
+        }
         return url
     }
 }

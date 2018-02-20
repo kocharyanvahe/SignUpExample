@@ -13,18 +13,18 @@ struct User: Codable {
     var password: String
     var country: String? = nil
     var city: String? = nil
-    var postalCode: Int? = 0
+    var postal_code: Int? = nil
     
     init(email: String, password: String) {
         self.email = email
         self.password = password
     }
     
-    init(email: String, password: String, country: String, city: String, postalCode: Int) {
+    init(email: String, password: String, country: String, city: String, postal_code: Int) {
         self.email = email
         self.password = password
         self.country = country
         self.city = city
-        self.postalCode = postalCode
+        self.postal_code = postal_code
     }
 }

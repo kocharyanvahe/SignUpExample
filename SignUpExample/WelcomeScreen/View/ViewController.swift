@@ -12,19 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = User(email: "x@y.z", password: "abc")
-        /*
-        login(post: user) { (error) in
-            if let error = error {
-                fatalError(error.localizedDescription)
-            }
-        }*/
-        
-       
+        //let manager = Manager() //Qwerty1234
+        //let user = User(email: "a@abcd.com", password: "Qwerty1234", country: "ET", city: "Tallinn", postal_code: 10111)
+        //manager.registration(with: user)
+        //let user = User(email: "a@abcd.com", password: "Qwerty1234")
+        //manager.login(with: user)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

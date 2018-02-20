@@ -16,14 +16,16 @@ protocol ManagerInputProtocol: class {
 
 protocol ManagerOutputProtocol: class {
     // MANAGER -> INTERACTOR
-    func successfullyLoggedIn(_ response: Dictionary<String, Any>)
+    func success<R: Decodable>(result: R)
     func failed()
+    func failedWithReason(_ errorMessage: String)
 }
 
 protocol ManagerInteractorOutputProtocol: class {
     // INTERACTOR -> PRESENTER
-    func successfullyLoggedIn(_ response: Dictionary<String, Any>)
+    func success()
     func failed()
+    func failedWithReason(_ errorMessage: String)
 }
 
 protocol ManagerInteractorInputProtocol: class {
