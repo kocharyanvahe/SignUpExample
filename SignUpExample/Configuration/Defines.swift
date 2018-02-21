@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Defines {
+    static let UserExist = "err.user.exists"
+    static let PasswordTooShort = "err.password.too.short"
+    static let WrongCredentials = "err.wrong.credentials"
+    static let TimeOut = "err.timeout"
+}

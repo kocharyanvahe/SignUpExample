@@ -28,6 +28,14 @@
 		28C6E86E20337F0600D762CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6E86D20337F0600D762CB /* ViewController.swift */; };
 		28C6E87620337F0600D762CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C6E87520337F0600D762CB /* Assets.xcassets */; };
 		28C6E87920337F0600D762CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C6E87720337F0600D762CB /* LaunchScreen.storyboard */; };
+		28D701C6203CA26A00251408 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701C5203CA26A00251408 /* Router.swift */; };
+		28D701CC203CA7A800251408 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701CB203CA7A800251408 /* LoginService.swift */; };
+		28D701CE203CA7B600251408 /* LoginServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701CD203CA7B600251408 /* LoginServiceImplementation.swift */; };
+		28D701D0203CA7D000251408 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701CF203CA7D000251408 /* RegistrationService.swift */; };
+		28D701D2203CA7DF00251408 /* RegistrationServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701D1203CA7DF00251408 /* RegistrationServiceImplementation.swift */; };
+		28D701D4203CAAAD00251408 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701D3203CAAAD00251408 /* ErrorHandling.swift */; };
+		28D701D6203CB88400251408 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701D5203CB88400251408 /* NetworkRequest.swift */; };
+		28D701D8203CB89400251408 /* NetworkRequestImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D701D7203CB89400251408 /* NetworkRequestImplementation.swift */; };
 		B918400FA577BEE525C53375 /* Pods_SignUpExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F473E292F665EAFA4FC730C6 /* Pods_SignUpExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +63,14 @@
 		28C6E87520337F0600D762CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C6E87820337F0600D762CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C6E87A20337F0600D762CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D701C5203CA26A00251408 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		28D701CB203CA7A800251408 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		28D701CD203CA7B600251408 /* LoginServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceImplementation.swift; sourceTree = "<group>"; };
+		28D701CF203CA7D000251408 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		28D701D1203CA7DF00251408 /* RegistrationServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationServiceImplementation.swift; sourceTree = "<group>"; };
+		28D701D3203CAAAD00251408 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		28D701D5203CB88400251408 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		28D701D7203CB89400251408 /* NetworkRequestImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestImplementation.swift; sourceTree = "<group>"; };
 		2975620CAC8F2633A8C0BBCA /* Pods-SignUpExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignUpExample/Pods-SignUpExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C9E5D4ADD2DEB982D0EE252D /* Pods-SignUpExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignUpExample/Pods-SignUpExample.release.xcconfig"; sourceTree = "<group>"; };
 		F473E292F665EAFA4FC730C6 /* Pods_SignUpExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignUpExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +221,7 @@
 		28C6E86A20337F0600D762CB /* SignUpExample */ = {
 			isa = PBXGroup;
 			children = (
+				28D701C3203CA24700251408 /* Networking */,
 				28B6A2C9203B5017004900E9 /* Models */,
 				28B6A2C6203B487B004900E9 /* Configuration */,
 				28B6A2C0203B3F26004900E9 /* Manager */,
@@ -237,6 +254,29 @@
 				281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		28D701C3203CA24700251408 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				28D701CA203CA79200251408 /* Services */,
+				28D701C5203CA26A00251408 /* Router.swift */,
+				28D701D3203CAAAD00251408 /* ErrorHandling.swift */,
+				28D701D5203CB88400251408 /* NetworkRequest.swift */,
+				28D701D7203CB89400251408 /* NetworkRequestImplementation.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		28D701CA203CA79200251408 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				28D701CB203CA7A800251408 /* LoginService.swift */,
+				28D701CD203CA7B600251408 /* LoginServiceImplementation.swift */,
+				28D701CF203CA7D000251408 /* RegistrationService.swift */,
+				28D701D1203CA7DF00251408 /* RegistrationServiceImplementation.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		36816F4C2779677F5C278A35 /* Pods */ = {
@@ -392,18 +432,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D701CC203CA7A800251408 /* LoginService.swift in Sources */,
 				28B6A2BF203B3CF7004900E9 /* LoginView.swift in Sources */,
 				281262BD203C912700019EF9 /* Storyboard.swift in Sources */,
 				281262C6203C957C00019EF9 /* CountryCredentialsViewController.swift in Sources */,
 				28C6E86E20337F0600D762CB /* ViewController.swift in Sources */,
 				281262C3203C94A200019EF9 /* UserCredentialsViewController.swift in Sources */,
+				28D701D0203CA7D000251408 /* RegistrationService.swift in Sources */,
 				28C6E86C20337F0600D762CB /* AppDelegate.swift in Sources */,
+				28D701D6203CB88400251408 /* NetworkRequest.swift in Sources */,
 				281262B7203C8DC200019EF9 /* RegistrationView.swift in Sources */,
+				28D701D4203CAAAD00251408 /* ErrorHandling.swift in Sources */,
 				281262C0203C939200019EF9 /* InfoRegistrationViewController.swift in Sources */,
+				28D701C6203CA26A00251408 /* Router.swift in Sources */,
 				28B6A2C3203B3FF7004900E9 /* Protocols.swift in Sources */,
+				28D701D2203CA7DF00251408 /* RegistrationServiceImplementation.swift in Sources */,
 				28B6A2C8203B4897004900E9 /* API.swift in Sources */,
+				28D701CE203CA7B600251408 /* LoginServiceImplementation.swift in Sources */,
 				28B6A2C5203B46A3004900E9 /* Manager.swift in Sources */,
 				281262BB203C904E00019EF9 /* SwinjectStoryboard_Setup.swift in Sources */,
+				28D701D8203CB89400251408 /* NetworkRequestImplementation.swift in Sources */,
 				2838547C203C47DE00050A36 /* Defines.swift in Sources */,
 				281262CA203C96BD00019EF9 /* SuccessViewController.swift in Sources */,
 				28B6A2CB203B5022004900E9 /* User.swift in Sources */,
