@@ -11,14 +11,18 @@ import Swinject
 import SwinjectStoryboard
 
 extension SwinjectStoryboard {
-    class func setup() {
-        // Network layer
+    @objc class func setup() {
+        Container.loggingFunction = nil
+        // ServiceAssembly layer
+        ServiceAssembly.assembly(defaultContainer)
         
         // Welcome module
-        
-        // Registration modules
+        WelcomeScreenAssembly.assembly(defaultContainer)
         
         // Login module
+        LoginScreenAssembly.assembly(defaultContainer)
+        
+        // Registration modules
         
     }
 }

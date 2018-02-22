@@ -12,33 +12,33 @@ enum RequestError: Error {
     case WrongCredentials
     case PasswordTooShort
     case NoInternetConnection
-    case ServerError
     case UserAlreadyExist
     case TimeOut
+    case UnknownError
     
-    static func checkError(_ errorMessage: String, errorCode: Int) -> RequestError {
+    static func checkError(_ errorMessage: String?, errorCode: Int) -> RequestError {
         switch errorCode {
         case -1009, -1005:
             return RequestError.NoInternetConnection
         case 400:
             switch errorMessage {
-            case Defines.UserExist:
+            case Defines.UserExist?:
                 return RequestError.UserAlreadyExist
-            case Defines.PasswordTooShort:
+            case Defines.PasswordTooShort?:
                 return RequestError.PasswordTooShort
-            case Defines.WrongCredentials:
+            case Defines.WrongCredentials?:
                 return RequestError.WrongCredentials
             default:
-                return RequestError.ServerError
+                return RequestError.UnknownError
         }
         case 408:
             if errorMessage == Defines.TimeOut {
                 return RequestError.TimeOut
             } else {
-                return RequestError.ServerError
+                return RequestError.UnknownError
             }
         default:
-            return RequestError.ServerError
+            return RequestError.UnknownError
         }
     }
 }

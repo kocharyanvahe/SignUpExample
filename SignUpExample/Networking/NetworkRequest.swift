@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkRequest {
-    func request(with user: User, url: URL, success: @escaping ((Bool) -> ()), failure: ((RequestError) -> ())?)
+    func request(with user: User, url: URL, success: @escaping ((Bool, String?) -> ()), failure: ((RequestError) -> ())?)
 }

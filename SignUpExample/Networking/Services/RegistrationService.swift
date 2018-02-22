@@ -9,7 +9,6 @@
 import Foundation
 
 protocol RegistrationService {
-    func performRegistration(withUser: User,
-                      success: @escaping ((Bool) -> ()),
-                      failure: ((RequestError) -> ())?)
+    func performRegistration(with user: User, success: @escaping ((Bool, String?) -> ()),
+                                              failure: ((RequestError) -> ())?)
 }

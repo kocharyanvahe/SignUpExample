@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationView: UIViewController {
+class RegistrationView: UIViewController, TransitionHandler {
 
     override func viewDidLoad() {
         super.viewDidLoad()

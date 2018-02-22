@@ -18,12 +18,14 @@ enum Router: URLRequestConvertible {
                 return (params)
             }
         }()
+        
         let url: URL = {
             switch self {
             case .post(let url, _):
                 return (url)
             }
         }()
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         let encoding = JSONEncoding.default

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280D6841203DC729000C1CCB /* WelcomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6840203DC729000C1CCB /* WelcomeScreenPresenter.swift */; };
+		280D6843203DC73B000C1CCB /* WelcomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6842203DC73B000C1CCB /* WelcomeScreenRouter.swift */; };
+		280D6845203DC784000C1CCB /* WelcomeScreenRouterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6844203DC784000C1CCB /* WelcomeScreenRouterImplementation.swift */; };
+		280D6847203DC7E1000C1CCB /* WelcomeScreenPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6846203DC7E1000C1CCB /* WelcomeScreenPresenterImplementation.swift */; };
+		280D684C203DCC34000C1CCB /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D684B203DCC34000C1CCB /* LoginScreenInteractor.swift */; };
+		280D684E203DCC4A000C1CCB /* LoginScreenInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D684D203DCC4A000C1CCB /* LoginScreenInteractorImplementation.swift */; };
+		280D6850203DCC5E000C1CCB /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D684F203DCC5E000C1CCB /* LoginScreenPresenter.swift */; };
+		280D6852203DCC70000C1CCB /* LoginScreenPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6851203DCC70000C1CCB /* LoginScreenPresenterImplementation.swift */; };
+		280D6854203DCC88000C1CCB /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6853203DCC88000C1CCB /* LoginScreenRouter.swift */; };
+		280D6856203DCC99000C1CCB /* LoginScreenRouterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6855203DCC99000C1CCB /* LoginScreenRouterImplementation.swift */; };
+		280D6859203DEDE8000C1CCB /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6858203DEDE8000C1CCB /* NavigationHandler.swift */; };
+		280D685C203DFAD0000C1CCB /* WelcomeScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D685B203DFAD0000C1CCB /* WelcomeScreenAssembly.swift */; };
+		280D685E203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */; };
+		280D6861203E0184000C1CCB /* LoginScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6860203E0184000C1CCB /* LoginScreenAssembly.swift */; };
+		280D6865203E04D2000C1CCB /* LoginScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6864203E04D2000C1CCB /* LoginScreenViewProtocol.swift */; };
+		280D6867203E08B1000C1CCB /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6866203E08B1000C1CCB /* ServiceAssembly.swift */; };
 		281262B0203C8D0500019EF9 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */; };
 		281262B2203C8D3200019EF9 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262B1203C8D3200019EF9 /* LoginScreen.storyboard */; };
 		281262B7203C8DC200019EF9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281262B6203C8DC200019EF9 /* RegistrationView.swift */; };
@@ -20,8 +36,6 @@
 		281262CE203C98EE00019EF9 /* SuccessScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262CD203C98EE00019EF9 /* SuccessScreen.storyboard */; };
 		2838547C203C47DE00050A36 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2838547B203C47DE00050A36 /* Defines.swift */; };
 		28B6A2BF203B3CF7004900E9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2BE203B3CF7004900E9 /* LoginView.swift */; };
-		28B6A2C3203B3FF7004900E9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C2203B3FF7004900E9 /* Protocols.swift */; };
-		28B6A2C5203B46A3004900E9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C4203B46A3004900E9 /* Manager.swift */; };
 		28B6A2C8203B4897004900E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2C7203B4897004900E9 /* API.swift */; };
 		28B6A2CB203B5022004900E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6A2CA203B5022004900E9 /* User.swift */; };
 		28C6E86C20337F0600D762CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C6E86B20337F0600D762CB /* AppDelegate.swift */; };
@@ -40,6 +54,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280D6840203DC729000C1CCB /* WelcomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenPresenter.swift; sourceTree = "<group>"; };
+		280D6842203DC73B000C1CCB /* WelcomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenRouter.swift; sourceTree = "<group>"; };
+		280D6844203DC784000C1CCB /* WelcomeScreenRouterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenRouterImplementation.swift; sourceTree = "<group>"; };
+		280D6846203DC7E1000C1CCB /* WelcomeScreenPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenPresenterImplementation.swift; sourceTree = "<group>"; };
+		280D684B203DCC34000C1CCB /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
+		280D684D203DCC4A000C1CCB /* LoginScreenInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractorImplementation.swift; sourceTree = "<group>"; };
+		280D684F203DCC5E000C1CCB /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
+		280D6851203DCC70000C1CCB /* LoginScreenPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenterImplementation.swift; sourceTree = "<group>"; };
+		280D6853203DCC88000C1CCB /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
+		280D6855203DCC99000C1CCB /* LoginScreenRouterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouterImplementation.swift; sourceTree = "<group>"; };
+		280D6858203DEDE8000C1CCB /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
+		280D685B203DFAD0000C1CCB /* WelcomeScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenAssembly.swift; sourceTree = "<group>"; };
+		280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewInputProtocol.swift; sourceTree = "<group>"; };
+		280D6860203E0184000C1CCB /* LoginScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenAssembly.swift; sourceTree = "<group>"; };
+		280D6864203E04D2000C1CCB /* LoginScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewProtocol.swift; sourceTree = "<group>"; };
+		280D6866203E08B1000C1CCB /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		281262B1203C8D3200019EF9 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		281262B6203C8DC200019EF9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -53,8 +83,6 @@
 		281262CD203C98EE00019EF9 /* SuccessScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessScreen.storyboard; sourceTree = "<group>"; };
 		2838547B203C47DE00050A36 /* Defines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		28B6A2BE203B3CF7004900E9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		28B6A2C2203B3FF7004900E9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		28B6A2C4203B46A3004900E9 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		28B6A2C7203B4897004900E9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28B6A2CA203B5022004900E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		28C6E86820337F0600D762CB /* SignUpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +116,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280D683E203DC702000C1CCB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				280D6840203DC729000C1CCB /* WelcomeScreenPresenter.swift */,
+				280D6846203DC7E1000C1CCB /* WelcomeScreenPresenterImplementation.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		280D683F203DC70F000C1CCB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				280D6842203DC73B000C1CCB /* WelcomeScreenRouter.swift */,
+				280D6844203DC784000C1CCB /* WelcomeScreenRouterImplementation.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		280D6848203DCBED000C1CCB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				280D6853203DCC88000C1CCB /* LoginScreenRouter.swift */,
+				280D6855203DCC99000C1CCB /* LoginScreenRouterImplementation.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		280D6849203DCBF8000C1CCB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				280D684F203DCC5E000C1CCB /* LoginScreenPresenter.swift */,
+				280D6851203DCC70000C1CCB /* LoginScreenPresenterImplementation.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		280D684A203DCC04000C1CCB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				280D684B203DCC34000C1CCB /* LoginScreenInteractor.swift */,
+				280D684D203DCC4A000C1CCB /* LoginScreenInteractorImplementation.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		280D6857203DEDD1000C1CCB /* NavigationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				280D6858203DEDE8000C1CCB /* NavigationHandler.swift */,
+			);
+			path = NavigationHandler;
+			sourceTree = "<group>";
+		};
+		280D685A203DFABB000C1CCB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				280D685B203DFAD0000C1CCB /* WelcomeScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		280D685F203E0163000C1CCB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				280D6860203E0184000C1CCB /* LoginScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		281262B4203C8D9900019EF9 /* RegistrationScreens */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +249,10 @@
 		28B6A2BC203B3C8B004900E9 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				28B6A2C1203B3F6A004900E9 /* Protocols */,
+				280D685F203E0163000C1CCB /* Assembly */,
+				280D684A203DCC04000C1CCB /* Interactor */,
+				280D6849203DCBF8000C1CCB /* Presenter */,
+				280D6848203DCBED000C1CCB /* Router */,
 				28B6A2BD203B3CD4004900E9 /* View */,
 			);
 			path = LoginScreen;
@@ -163,24 +263,9 @@
 			children = (
 				28B6A2BE203B3CF7004900E9 /* LoginView.swift */,
 				281262B1203C8D3200019EF9 /* LoginScreen.storyboard */,
+				280D6864203E04D2000C1CCB /* LoginScreenViewProtocol.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		28B6A2C0203B3F26004900E9 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				28B6A2C4203B46A3004900E9 /* Manager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		28B6A2C1203B3F6A004900E9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				28B6A2C2203B3FF7004900E9 /* Protocols.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		28B6A2C6203B487B004900E9 /* Configuration */ = {
@@ -221,10 +306,10 @@
 		28C6E86A20337F0600D762CB /* SignUpExample */ = {
 			isa = PBXGroup;
 			children = (
+				280D6857203DEDD1000C1CCB /* NavigationHandler */,
 				28D701C3203CA24700251408 /* Networking */,
 				28B6A2C9203B5017004900E9 /* Models */,
 				28B6A2C6203B487B004900E9 /* Configuration */,
-				28B6A2C0203B3F26004900E9 /* Manager */,
 				281262C7203C968300019EF9 /* SuccessScreen */,
 				281262B4203C8D9900019EF9 /* RegistrationScreens */,
 				28B6A2BC203B3C8B004900E9 /* LoginScreen */,
@@ -242,6 +327,9 @@
 		28C6E8802033951900D762CB /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				280D685A203DFABB000C1CCB /* Assembly */,
+				280D683F203DC70F000C1CCB /* Router */,
+				280D683E203DC702000C1CCB /* Presenter */,
 				28C6E88120339A9200D762CB /* View */,
 			);
 			path = WelcomeScreen;
@@ -251,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				28C6E86D20337F0600D762CB /* ViewController.swift */,
+				280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */,
 				281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */,
 			);
 			path = View;
@@ -275,6 +364,7 @@
 				28D701CD203CA7B600251408 /* LoginServiceImplementation.swift */,
 				28D701CF203CA7D000251408 /* RegistrationService.swift */,
 				28D701D1203CA7DF00251408 /* RegistrationServiceImplementation.swift */,
+				280D6866203E08B1000C1CCB /* ServiceAssembly.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -432,9 +522,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280D6859203DEDE8000C1CCB /* NavigationHandler.swift in Sources */,
+				280D6856203DCC99000C1CCB /* LoginScreenRouterImplementation.swift in Sources */,
+				280D6847203DC7E1000C1CCB /* WelcomeScreenPresenterImplementation.swift in Sources */,
 				28D701CC203CA7A800251408 /* LoginService.swift in Sources */,
+				280D6843203DC73B000C1CCB /* WelcomeScreenRouter.swift in Sources */,
 				28B6A2BF203B3CF7004900E9 /* LoginView.swift in Sources */,
 				281262BD203C912700019EF9 /* Storyboard.swift in Sources */,
+				280D6861203E0184000C1CCB /* LoginScreenAssembly.swift in Sources */,
 				281262C6203C957C00019EF9 /* CountryCredentialsViewController.swift in Sources */,
 				28C6E86E20337F0600D762CB /* ViewController.swift in Sources */,
 				281262C3203C94A200019EF9 /* UserCredentialsViewController.swift in Sources */,
@@ -443,18 +538,27 @@
 				28D701D6203CB88400251408 /* NetworkRequest.swift in Sources */,
 				281262B7203C8DC200019EF9 /* RegistrationView.swift in Sources */,
 				28D701D4203CAAAD00251408 /* ErrorHandling.swift in Sources */,
+				280D6841203DC729000C1CCB /* WelcomeScreenPresenter.swift in Sources */,
+				280D685E203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift in Sources */,
+				280D6852203DCC70000C1CCB /* LoginScreenPresenterImplementation.swift in Sources */,
 				281262C0203C939200019EF9 /* InfoRegistrationViewController.swift in Sources */,
+				280D685C203DFAD0000C1CCB /* WelcomeScreenAssembly.swift in Sources */,
 				28D701C6203CA26A00251408 /* Router.swift in Sources */,
-				28B6A2C3203B3FF7004900E9 /* Protocols.swift in Sources */,
+				280D6845203DC784000C1CCB /* WelcomeScreenRouterImplementation.swift in Sources */,
 				28D701D2203CA7DF00251408 /* RegistrationServiceImplementation.swift in Sources */,
 				28B6A2C8203B4897004900E9 /* API.swift in Sources */,
 				28D701CE203CA7B600251408 /* LoginServiceImplementation.swift in Sources */,
-				28B6A2C5203B46A3004900E9 /* Manager.swift in Sources */,
+				280D6865203E04D2000C1CCB /* LoginScreenViewProtocol.swift in Sources */,
+				280D6867203E08B1000C1CCB /* ServiceAssembly.swift in Sources */,
 				281262BB203C904E00019EF9 /* SwinjectStoryboard_Setup.swift in Sources */,
 				28D701D8203CB89400251408 /* NetworkRequestImplementation.swift in Sources */,
 				2838547C203C47DE00050A36 /* Defines.swift in Sources */,
+				280D684C203DCC34000C1CCB /* LoginScreenInteractor.swift in Sources */,
 				281262CA203C96BD00019EF9 /* SuccessViewController.swift in Sources */,
+				280D684E203DCC4A000C1CCB /* LoginScreenInteractorImplementation.swift in Sources */,
+				280D6850203DCC5E000C1CCB /* LoginScreenPresenter.swift in Sources */,
 				28B6A2CB203B5022004900E9 /* User.swift in Sources */,
+				280D6854203DCC88000C1CCB /* LoginScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

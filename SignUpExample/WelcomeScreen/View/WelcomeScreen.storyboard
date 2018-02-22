@@ -13,7 +13,7 @@
         <!--Welcome-->
         <scene sceneID="NmH-fn-jAT">
             <objects>
-                <viewController id="0ni-oJ-1q5" customClass="ViewController" customModule="SignUpExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="0ni-oJ-1q5" customClass="ViewController" customModule="SignUpExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7p7-DE-ETv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,10 +24,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-qU-ebg">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="0ni-oJ-1q5" eventType="touchUpInside" id="7s1-3H-S7F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx8-wH-yzs">
                                         <rect key="frame" x="0.0" y="80" width="343" height="30"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerTapped:" destination="0ni-oJ-1q5" eventType="touchUpInside" id="phm-ER-o2c"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
