@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Vaq-1H-bLD">
-                                <rect key="frame" x="16" y="125" width="343" height="170"/>
+                                <rect key="frame" x="16" y="140" width="343" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0M6-v2-HRz">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -53,14 +53,18 @@
                         <constraints>
                             <constraint firstItem="Vaq-1H-bLD" firstAttribute="leading" secondItem="Z2o-y4-BDq" secondAttribute="leading" constant="16" id="Jrf-0e-p5P"/>
                             <constraint firstItem="Z2o-y4-BDq" firstAttribute="trailing" secondItem="Vaq-1H-bLD" secondAttribute="trailing" constant="16" id="dWr-ii-Ojn"/>
-                            <constraint firstItem="Vaq-1H-bLD" firstAttribute="top" secondItem="Z2o-y4-BDq" secondAttribute="top" constant="105" id="zFi-Ol-Vgp"/>
+                            <constraint firstItem="Vaq-1H-bLD" firstAttribute="top" secondItem="Z2o-y4-BDq" secondAttribute="top" constant="120" id="lpE-ww-GWL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z2o-y4-BDq"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="0M6-v2-HRz" id="tbc-NU-QM2"/>
+                        <outlet property="passwordTextField" destination="rbG-Im-JAh" id="PJu-6f-qC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwK-Mf-QxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308" y="-329"/>
+            <point key="canvasLocation" x="1308" y="-329.68515742128938"/>
         </scene>
     </scenes>
 </document>

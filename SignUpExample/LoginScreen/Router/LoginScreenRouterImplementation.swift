@@ -12,11 +12,14 @@ final class LoginScreenRouterImplementation: LoginScreenRouter {
     
     weak var transitionHandler: LoginScreenViewProtocol!
     
-    func openWelcomeScreen() {
-        
-    }
-    
     func openSuccessfullScreen() {
-        
+        guard let transitionHandler = transitionHandler as? TransitionHandler else { return }
+        let moduleId = ModuleId(storyboardId: Storyboard.Success.storyboardName,
+                                controllerId: Storyboard.Success.successViewControllerScene.rawValue,
+                                transitionType: .push)
+        transitionHandler.openModule(with: moduleId) { configure in
+            configure.configure(with: SuccessScreenSetupConfiguration(config: .SuccessLogin))
+        }
     }
 }
+

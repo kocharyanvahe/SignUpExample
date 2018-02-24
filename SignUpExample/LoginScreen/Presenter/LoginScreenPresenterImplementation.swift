@@ -16,21 +16,19 @@ final class LoginScreenPresenterImplementation: LoginScreenPresenter {
     var requestCounter: Int = 0
     
     func loginAction(with email: String, password: String) {
+        interactor.fillUser(email: email, password: password)
         requestCounter = 5
-        let user = createUser(with: email, password: password)
+        guard let user = interactor.getUser() else { return }
         loginUser(user)
     }
     
-    private func createUser(with email: String, password: String) -> User {
-        let user = User(email: email, password: password)
-        return user
-    }
-    
     private func loginUser(_ user: User) {
-        let error1 = RequestError.TimeOut
         interactor.performLogin(with: user, success: { (isSuccess, responseString) in
+            if isSuccess {
+                self.router.openSuccessfullScreen()
+            }
         }) { (error) in
-            switch error1 {
+            switch error {
             case .NoInternetConnection:
                 self.view.showError(message: Defines.Messages.NoInternetConnectionMessage.rawValue)
                 return

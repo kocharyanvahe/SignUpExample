@@ -20,6 +20,7 @@ class LoginScreenAssembly {
         container.register(LoginScreenPresenter.self, factory: { (resolver, controller :LoginScreenViewProtocol) in
             let presenter = LoginScreenPresenterImplementation()
             presenter.view = controller
+            presenter.interactor = resolver.resolve(LoginScreenInteractor.self)
             presenter.router = resolver.resolve(LoginScreenRouter.self, argument: controller as LoginScreenViewProtocol)
             return presenter
         }).inObjectScope(ObjectScope.transient)
@@ -33,6 +34,7 @@ class LoginScreenAssembly {
         container.register(LoginScreenInteractor.self, factory: { resolver in
             let interactor = LoginScreenInteractorImplementation()
             interactor.loginService = resolver.resolve(LoginService.self)
+            interactor.userManager = resolver.resolve(UserManager.self)
             return interactor
         }).inObjectScope(ObjectScope.transient)
     }

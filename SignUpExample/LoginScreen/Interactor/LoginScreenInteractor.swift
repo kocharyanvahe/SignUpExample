@@ -9,5 +9,7 @@
 import Foundation
 
 protocol LoginScreenInteractor {
+    func getUser() -> User?
+    func fillUser(email: String, password: String)
     func performLogin(with user: User, success: @escaping ((Bool, String?) -> ()), failure: ((RequestError) -> ())?)
 }

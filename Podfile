@@ -9,5 +9,6 @@ target 'SignUpExample' do
   pod 'Alamofire', '~> 4.6'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod ‘CRNotifications’
 
 end

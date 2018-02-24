@@ -9,6 +9,5 @@
 import Foundation
 
 protocol LoginScreenRouter {
-    func openWelcomeScreen()
     func openSuccessfullScreen()
 }

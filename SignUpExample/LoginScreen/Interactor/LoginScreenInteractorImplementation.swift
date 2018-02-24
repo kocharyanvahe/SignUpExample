@@ -14,6 +14,19 @@ import Foundation
 
 final class LoginScreenInteractorImplementation: LoginScreenInteractor {
     var loginService: LoginService!
+    var userManager: UserManager!
+    
+    func getUser() -> User? {
+        return userManager.getUser()
+    }
+    
+    func fillUser(email: String, password: String) {
+        guard let _ = getUser() else {
+            userManager.createUser(email: email, password: password)
+            return
+        }
+        userManager.updateUserCredentials(email: email, password: password)
+    }
     
     func performLogin(with user: User, success: @escaping ((Bool, String?) -> ()), failure: ((RequestError) -> ())?) {
         loginService.performLogin(with: user, success: { (isSuccess, responseText) in

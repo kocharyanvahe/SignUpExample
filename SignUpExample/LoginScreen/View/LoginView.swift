@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CRNotifications
 
 class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     var presenter: LoginScreenPresenter!
     
@@ -17,14 +21,40 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
     }
 
     @IBAction func loginTapped(_ sender: UIButton) {
-        
+        if isTextFieldsNotEmpty() {
+            presenter.loginAction(with: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        }
     }
     
     func showError(message: String) {
-        
+        //CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
+        CRNotifications.showNotification(on: self.view, type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            if isTextFieldsNotEmpty() {
+                presenter.loginAction(with: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+            }
+        default:
+            break
+        }
+        return false
+    }
+    
+    func isTextFieldsNotEmpty() -> Bool {
+        guard let isEmailTextEmpty = emailTextField.text?.isEmpty, let isPasswordTextEmpty = passwordTextField.text?.isEmpty, !isEmailTextEmpty, !isPasswordTextEmpty else {
+            return false
+        }
+        return true
     }
 }

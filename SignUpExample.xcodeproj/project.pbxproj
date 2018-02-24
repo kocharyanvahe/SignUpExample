@@ -340,7 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				28C6E86D20337F0600D762CB /* ViewController.swift */,
-				280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */,
+				280D685D203DFC55000C1CCB /* WelcomeScreenViewProtocol.swift */,
 				281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */,
 			);
 			path = View;
