@@ -1,5 +1,5 @@
 //
-//  WelcomeScreenViewInputProtocol.swift
+//  WelcomeScreenViewProtocol.swift
 //  SignUpExample
 //
 //  Created by Kocharyan, Vahe on 2/21/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol WelcomeScreenViewInputProtocol: class {
+protocol WelcomeScreenViewProtocol: class {
     
 }

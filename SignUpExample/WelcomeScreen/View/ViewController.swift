@@ -8,33 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, WelcomeScreenViewInputProtocol, TransitionHandler {
+class ViewController: UIViewController, WelcomeScreenViewProtocol, TransitionHandler {
     
     var presenter: WelcomeScreenPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let manager = Manager() //Qwerty1234
-        //let user = User(email: "a@abcd.com", password: "Qwerty1234", country: "ET", city: "Tallinn", postal_code: 10111)
-        //manager.registration(with: user)
-        //let user = User(email: "a@abcd.com", password: "Qwerty1234")
-        //manager.login(with: user)
-        
-//        let networkService = NetworkRequestImplementation()
-//        let user = User(email: "a@abcd.com", password: "Qwerty1234", country: "ET", city: "Tallinn", postal_code: 10111)
-        
-//        networkService.request(with: user, url: API.createURL(endPoint: .registration), success: { success in
-//            print("success :\(success)")
-//        }) { (_) in
-//            print("fail")
-//        }
-        
-//        networkService.request(with: user, url: API.createURL(endPoint: .registration), success: { (isSuccess, resultString) in
-//            print("\(isSuccess), \(resultString ?? "no result")")
-//        }) { (_) in
-//            print("faaaail")
-//        }
-        
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {

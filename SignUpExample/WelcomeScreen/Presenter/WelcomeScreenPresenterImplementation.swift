@@ -10,7 +10,7 @@ import Foundation
 
 final class WelcomeScreenPresenterImplementation: WelcomeScreenPresenter {
     var router: WelcomeScreenRouter!
-    var view: WelcomeScreenViewInputProtocol!
+    var view: WelcomeScreenViewProtocol!
     
     func loginAction() {
         router.openLoginFlow()

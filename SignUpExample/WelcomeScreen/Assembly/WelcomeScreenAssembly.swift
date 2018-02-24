@@ -11,18 +11,20 @@ import Swinject
 import SwinjectStoryboard
 
 class WelcomeScreenAssembly {
+    
     class func assembly(_ container: Container) {
+        
         container.storyboardInitCompleted(ViewController.self) { (resolver, controller) in
-            controller.presenter = resolver.resolve(WelcomeScreenPresenter.self, argument: controller as WelcomeScreenViewInputProtocol)
+            controller.presenter = resolver.resolve(WelcomeScreenPresenter.self, argument: controller as WelcomeScreenViewProtocol)
         }
-        container.register(WelcomeScreenPresenter.self, factory: { (resolver, controller : WelcomeScreenViewInputProtocol) in
+        container.register(WelcomeScreenPresenter.self, factory: { (resolver, controller : WelcomeScreenViewProtocol) in
             let presenter = WelcomeScreenPresenterImplementation()
             presenter.view = controller
-            presenter.router = resolver.resolve(WelcomeScreenRouter.self, argument: controller as WelcomeScreenViewInputProtocol)
+            presenter.router = resolver.resolve(WelcomeScreenRouter.self, argument: controller as WelcomeScreenViewProtocol)
             return presenter
         }).inObjectScope(ObjectScope.transient)
         
-        container.register(WelcomeScreenRouter.self, factory: { (_, controller : WelcomeScreenViewInputProtocol) in
+        container.register(WelcomeScreenRouter.self, factory: { (_, controller : WelcomeScreenViewProtocol) in
             let router = WelcomeScreenRouterImplementation()
             router.transitionHandler = controller
             return router

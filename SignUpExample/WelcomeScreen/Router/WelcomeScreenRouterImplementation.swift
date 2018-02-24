@@ -11,7 +11,7 @@ import UIKit
 
 final class WelcomeScreenRouterImplementation: WelcomeScreenRouter {
     
-    weak var transitionHandler: WelcomeScreenViewInputProtocol!
+    weak var transitionHandler: WelcomeScreenViewProtocol!
     
     func openLoginFlow() {
         guard let transitionHandler = transitionHandler as? TransitionHandler else { return }

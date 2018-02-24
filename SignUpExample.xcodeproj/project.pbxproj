@@ -19,13 +19,12 @@
 		280D6856203DCC99000C1CCB /* LoginScreenRouterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6855203DCC99000C1CCB /* LoginScreenRouterImplementation.swift */; };
 		280D6859203DEDE8000C1CCB /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6858203DEDE8000C1CCB /* NavigationHandler.swift */; };
 		280D685C203DFAD0000C1CCB /* WelcomeScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D685B203DFAD0000C1CCB /* WelcomeScreenAssembly.swift */; };
-		280D685E203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */; };
+		280D685E203DFC55000C1CCB /* WelcomeScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D685D203DFC55000C1CCB /* WelcomeScreenViewProtocol.swift */; };
 		280D6861203E0184000C1CCB /* LoginScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6860203E0184000C1CCB /* LoginScreenAssembly.swift */; };
 		280D6865203E04D2000C1CCB /* LoginScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6864203E04D2000C1CCB /* LoginScreenViewProtocol.swift */; };
 		280D6867203E08B1000C1CCB /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D6866203E08B1000C1CCB /* ServiceAssembly.swift */; };
 		281262B0203C8D0500019EF9 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */; };
 		281262B2203C8D3200019EF9 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262B1203C8D3200019EF9 /* LoginScreen.storyboard */; };
-		281262B7203C8DC200019EF9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281262B6203C8DC200019EF9 /* RegistrationView.swift */; };
 		281262B9203C8DD800019EF9 /* RegistrationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281262B8203C8DD800019EF9 /* RegistrationScreen.storyboard */; };
 		281262BB203C904E00019EF9 /* SwinjectStoryboard_Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281262BA203C904E00019EF9 /* SwinjectStoryboard_Setup.swift */; };
 		281262BD203C912700019EF9 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281262BC203C912700019EF9 /* Storyboard.swift */; };
@@ -66,13 +65,12 @@
 		280D6855203DCC99000C1CCB /* LoginScreenRouterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouterImplementation.swift; sourceTree = "<group>"; };
 		280D6858203DEDE8000C1CCB /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
 		280D685B203DFAD0000C1CCB /* WelcomeScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenAssembly.swift; sourceTree = "<group>"; };
-		280D685D203DFC55000C1CCB /* WelcomeScreenViewInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewInputProtocol.swift; sourceTree = "<group>"; };
+		280D685D203DFC55000C1CCB /* WelcomeScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewProtocol.swift; sourceTree = "<group>"; };
 		280D6860203E0184000C1CCB /* LoginScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenAssembly.swift; sourceTree = "<group>"; };
 		280D6864203E04D2000C1CCB /* LoginScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewProtocol.swift; sourceTree = "<group>"; };
 		280D6866203E08B1000C1CCB /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		281262AF203C8D0500019EF9 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		281262B1203C8D3200019EF9 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
-		281262B6203C8DC200019EF9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		281262B8203C8DD800019EF9 /* RegistrationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationScreen.storyboard; sourceTree = "<group>"; };
 		281262BA203C904E00019EF9 /* SwinjectStoryboard_Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard_Setup.swift; sourceTree = "<group>"; };
 		281262BC203C912700019EF9 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -188,6 +186,10 @@
 		281262B4203C8D9900019EF9 /* RegistrationScreens */ = {
 			isa = PBXGroup;
 			children = (
+				2892936C203EFBB30089F1D1 /* Interactors */,
+				2892935C203EFA300089F1D1 /* Presenters */,
+				2892934C203EF9040089F1D1 /* Routers */,
+				2892933F203EF8290089F1D1 /* Assemblies */,
 				281262B5203C8DA500019EF9 /* View */,
 			);
 			path = RegistrationScreens;
@@ -199,7 +201,6 @@
 				281262C4203C954D00019EF9 /* CountryCredentials */,
 				281262C1203C948D00019EF9 /* UserCredentials */,
 				281262BE203C937B00019EF9 /* InfoRegistration */,
-				281262B6203C8DC200019EF9 /* RegistrationView.swift */,
 				281262B8203C8DD800019EF9 /* RegistrationScreen.storyboard */,
 			);
 			path = View;
