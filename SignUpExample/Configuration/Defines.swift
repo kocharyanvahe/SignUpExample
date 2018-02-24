@@ -14,6 +14,10 @@ struct Defines {
         case WrongCredentials = "Wrong Credentials"
         case UnknownError = "Something went wrong. Please, try again."
         case TimeOut = "Server is not reachable."
+        case SuccessLoginText = "You have successfully logged in."
+        case SuccessRegistrationText = "Congratulations for registering."
+        case PasswordTooShort = "Password too short. Please, try again."
+        case ErrorTitle = "ERROR!"
     }
     static let UserExist = "err.user.exists"
     static let PasswordTooShort = "err.password.too.short"

@@ -33,24 +33,24 @@ protocol ModuleConfiguration {
 }
 
 protocol TransitionHandler {
-    func openModule(with moduleId: ModuleId, completion: @escaping (ModuleConfiguration) -> ())
+    func openModule(with moduleId: ModuleId, completion: @escaping (ModuleConfigurable) -> ())
     func closeModule()
 }
 
 extension TransitionHandler where Self: UIViewController {
     
-    func openModule(with moduleId: ModuleId, completion: @escaping (ModuleConfiguration) -> ()) {
+    func openModule(with moduleId: ModuleId, completion: @escaping (ModuleConfigurable) -> ()) {
         switch moduleId.transitionType {
         case .modal:
             if let newViewController = createViewController(with: moduleId) {
-                //configureModule(newViewController, completion: completion)
+                configureModule(newViewController, completion: completion)
                 present(newViewController, animated: true, completion: nil)
             }
             
         case .push:
             if let navigationController = self.navigationController,
                 let newViewController = createViewController(with: moduleId) {
-                //configureModule(newViewController, completion: completion)
+                configureModule(newViewController, completion: completion)
                 navigationController.pushViewController(newViewController, animated: true)
             }
         }
@@ -76,12 +76,12 @@ extension TransitionHandler where Self: UIViewController {
         return destinationViewController
     }
     
-//    func configureModule(_ viewController: UIViewController, completion: @escaping (ModuleConfiguration) -> ()) {
-//        if let provider = viewController as? ModuleConfigurableProvider,
-//            let configurable = provider.configurable {
-//            completion(configurable)
-//        }
-//    }
+    func configureModule(_ viewController: UIViewController, completion: @escaping (ModuleConfigurable) -> ()) {
+        if let provider = viewController as? ModuleConfigurableProvider,
+            let configurable = provider.configurable {
+            completion(configurable)
+        }
+    }
     
     func closeModule() {
         if let navigationController = self.navigationController {

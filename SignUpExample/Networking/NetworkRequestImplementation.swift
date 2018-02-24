@@ -34,7 +34,7 @@ final class NetworkRequestImplementation: NetworkRequest {
                 default:
                     let errorText = response[Defines.ErrorResponseKey] as? String
                     success(false, errorText)
-                    failure?(RequestError.checkError(nil, errorCode: statusCode))
+                    failure?(RequestError.checkError(errorText, errorCode: statusCode))
                 }
             case .failure(_):
                 success(false, nil)
