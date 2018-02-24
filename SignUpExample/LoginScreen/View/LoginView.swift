@@ -27,8 +27,7 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
     }
     
     func showError(message: String) {
-        //CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
-        CRNotifications.showNotification(on: self.view, type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
+        CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
     }
     
     override func didReceiveMemoryWarning() {
