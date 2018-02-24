@@ -8,14 +8,38 @@
 
 import UIKit
 
-class UserCredentialsViewController: UIViewController {
-
+class UserCredentialsViewController: UIViewController, UserCredentialsViewProtocol, TransitionHandler {
+    
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    var presenter: UserCredentialsPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewIsReady()
     }
-
+    
+    @IBAction func checkBoxTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func nextTapped(_ sender: UIButton) {
+        if isTextFieldsNotEmpty() {
+            presenter.nextActionWith(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        }
+    }
+    
+    func viewIsReady() {
+        presenter.viewIsReady()
+    }
+    
+    func fillCredentials(email: String, password: String) {
+        emailTextField.text = email
+        passwordTextField.text = password
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,4 +56,27 @@ class UserCredentialsViewController: UIViewController {
     }
     */
 
+}
+
+extension UserCredentialsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            if isTextFieldsNotEmpty() {
+                presenter.nextActionWith(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+            }
+        default:
+            break
+        }
+        return false
+    }
+    
+    func isTextFieldsNotEmpty() -> Bool {
+        guard let isEmailTextEmpty = emailTextField.text?.isEmpty, let isPasswordTextEmpty = passwordTextField.text?.isEmpty, !isEmailTextEmpty, !isPasswordTextEmpty else {
+            return false
+        }
+        return true
+    }
 }

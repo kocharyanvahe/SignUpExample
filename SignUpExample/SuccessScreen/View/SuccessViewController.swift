@@ -8,12 +8,29 @@
 
 import UIKit
 
-class SuccessViewController: UIViewController {
+class SuccessViewController: UIViewController, SuccessViewProtocol, ModuleConfigurableProvider {
+    var configurable: ModuleConfigurable?
+    var presenter: SuccessScreenPresenter!
 
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setup()
+    }
+    
+    func setup() {
+        guard let configurable = configurable as? SuccessfullScreenConfigurable,
+            let configuration = configurable.config as? SuccessScreenSetupConfiguration,
+            let config = configuration.config else {
+            return
+        }
+        switch config {
+        case .SuccessLogin:
+            resultLabel.text = Defines.Messages.SuccessLoginText.rawValue
+        case .SuccessRegistration:
+            resultLabel.text = Defines.Messages.SuccessRegistrationText.rawValue
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +38,6 @@ class SuccessViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

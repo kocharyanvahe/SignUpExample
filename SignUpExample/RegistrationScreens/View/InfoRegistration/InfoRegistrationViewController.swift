@@ -8,20 +8,25 @@
 
 import UIKit
 
-class InfoRegistrationViewController: UIViewController {
-
+class InfoRegistrationViewController: UIViewController, InfoRegistrationViewProtocol, TransitionHandler {
+    
+    var presenter: InfoRegistrationPresenter!
+    
+    @IBOutlet weak var stepsLabel: UILabel!
+    @IBOutlet weak var infoTextLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func nextTapped(_ sender: UIButton) {
+        presenter.nextAction()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     /*
     // MARK: - Navigation
 

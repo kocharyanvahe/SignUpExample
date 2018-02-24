@@ -13,17 +13,34 @@
         <!--Success View Controller-->
         <scene sceneID="hfJ-vK-lxm">
             <objects>
-                <viewController id="i3R-BD-Uuc" customClass="SuccessViewController" customModule="SignUpExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessViewController" id="i3R-BD-Uuc" customClass="SuccessViewController" customModule="SignUpExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKx-I4-Vd7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq9-bn-CQj">
+                                <rect key="frame" x="16" y="110" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DcH-JJ-YdG" firstAttribute="trailing" secondItem="Xq9-bn-CQj" secondAttribute="trailing" constant="16" id="Jc1-Ju-uOR"/>
+                            <constraint firstItem="Xq9-bn-CQj" firstAttribute="leading" secondItem="DcH-JJ-YdG" secondAttribute="leading" constant="16" id="QO3-Dq-Zf7"/>
+                            <constraint firstItem="Xq9-bn-CQj" firstAttribute="centerX" secondItem="HKx-I4-Vd7" secondAttribute="centerX" id="aUe-yl-3lt"/>
+                            <constraint firstItem="Xq9-bn-CQj" firstAttribute="top" secondItem="DcH-JJ-YdG" secondAttribute="top" constant="90" id="jhe-eY-L5W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DcH-JJ-YdG"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="Xq9-bn-CQj" id="ipD-KR-of6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhb-Mz-Bnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="-178"/>
+            <point key="canvasLocation" x="-615.20000000000005" y="-200.14992503748127"/>
         </scene>
     </scenes>
 </document>
