@@ -13,6 +13,7 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     var presenter: LoginScreenPresenter!
     
@@ -28,6 +29,14 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
     
     func showError(message: String) {
         CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
+    }
+    
+    @IBAction func textFieldsEditingChanged(_ sender: UITextField) {
+        if isTextFieldsNotEmpty() {
+            loginButton.isEnabled = true
+        } else {
+            loginButton.isEnabled = false
+        }
     }
     
     override func didReceiveMemoryWarning() {

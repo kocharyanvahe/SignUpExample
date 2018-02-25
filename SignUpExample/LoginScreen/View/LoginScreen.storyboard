@@ -27,6 +27,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         <connections>
+                                            <action selector="textFieldsEditingChanged:" destination="Twl-0H-FFO" eventType="editingChanged" id="ugv-Nd-wrO"/>
                                             <outlet property="delegate" destination="Twl-0H-FFO" id="PTh-2t-Kmz"/>
                                         </connections>
                                     </textField>
@@ -36,10 +37,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
+                                            <action selector="textFieldsEditingChanged:" destination="Twl-0H-FFO" eventType="editingChanged" id="j9O-u5-TlJ"/>
                                             <outlet property="delegate" destination="Twl-0H-FFO" id="SC7-pa-Ijc"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGs-oO-3ra">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGs-oO-3ra">
                                         <rect key="frame" x="0.0" y="140" width="343" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -59,6 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="0M6-v2-HRz" id="tbc-NU-QM2"/>
+                        <outlet property="loginButton" destination="MGs-oO-3ra" id="Zrk-6B-Iza"/>
                         <outlet property="passwordTextField" destination="rbG-Im-JAh" id="PJu-6f-qC7"/>
                     </connections>
                 </viewController>

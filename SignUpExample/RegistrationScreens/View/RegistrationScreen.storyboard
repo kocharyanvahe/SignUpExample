@@ -194,6 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="textFieldsEditingChanged:" destination="gCP-l0-TsZ" eventType="editingChanged" id="rgH-8n-6oe"/>
                                     <outlet property="delegate" destination="gCP-l0-TsZ" id="vLa-97-yRU"/>
                                 </connections>
                             </textField>
@@ -203,10 +204,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
+                                    <action selector="textFieldsEditingChanged:" destination="gCP-l0-TsZ" eventType="editingChanged" id="PDh-5I-q8k"/>
                                     <outlet property="delegate" destination="gCP-l0-TsZ" id="GZS-KC-5Nv"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-VN-xTW">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-VN-xTW">
                                 <rect key="frame" x="151" y="365" width="72" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Register"/>
@@ -259,6 +261,7 @@
                         <outlet property="currentUsernameLabel" destination="fAD-ZC-3Sd" id="umj-p6-0f6"/>
                         <outlet property="pickerView" destination="XI9-aH-0th" id="OXc-LD-F4C"/>
                         <outlet property="postalIndexTextField" destination="8bs-Di-dkp" id="2Ga-dv-vlV"/>
+                        <outlet property="registerButton" destination="wQO-VN-xTW" id="iLZ-KX-qBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbR-Gx-FAz" userLabel="First Responder" sceneMemberID="firstResponder"/>

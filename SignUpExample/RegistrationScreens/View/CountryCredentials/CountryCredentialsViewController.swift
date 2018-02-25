@@ -18,6 +18,7 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     @IBOutlet weak var postalIndexTextField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var currentUsernameLabel: UILabel!
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,14 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func textFieldsEditingChanged(_ sender: UITextField) {
+        if isFieldsNotEmpty() {
+            registerButton.isEnabled = true
+        } else {
+            registerButton.isEnabled = false
+        }
     }
     
     func viewIsReady() {
