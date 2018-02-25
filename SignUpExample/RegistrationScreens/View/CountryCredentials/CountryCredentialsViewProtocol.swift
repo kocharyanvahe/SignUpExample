@@ -11,4 +11,5 @@ import Foundation
 protocol CountryCredentialsViewProtocol: class {
     func showError(message: String)
     func fillCredentials(email: String, city: String?, country: String?, postalCode: Int?)
+    func checkingRegisterButtonVisibility()
 }

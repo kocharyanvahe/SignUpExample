@@ -64,5 +64,6 @@ final class CountryCredentialsPresenterImplementation: CountryCredentialsPresent
     func configureView() {
         guard let user = interactor.getUser() else { return }
         view.fillCredentials(email: user.email, city: user.city, country: user.country, postalCode: user.postal_code)
+        view.checkingRegisterButtonVisibility()
     }
 }

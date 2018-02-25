@@ -69,6 +69,14 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
         }
     }
     
+    func checkingRegisterButtonVisibility() {
+        if isFieldsNotEmpty() {
+            registerButton.isEnabled = true
+        } else {
+            registerButton.isEnabled = false
+        }
+    }
+    
     private func getIntFromPostalIndexTextField() -> Int? {
         if let text = postalIndexTextField.text {
             guard let int = Int(text) else { return nil }
