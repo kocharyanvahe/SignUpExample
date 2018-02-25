@@ -12,7 +12,6 @@ import SwinjectStoryboard
 class UserManagerAssembly {
     
     class func assembly(_ container: Container) {
-        
         container.register(UserManager.self) { r in
             return UserManagerImplementation()
         }.inObjectScope(ObjectScope.container)

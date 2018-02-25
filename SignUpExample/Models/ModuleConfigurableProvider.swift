@@ -8,10 +8,6 @@
 
 import Foundation
 
-//protocol ModuleConfigurable {
-//    var configuration: ModuleConfiguration! { get set }
-//}
-
 protocol ModuleConfigurableProvider {
     var configurable: ModuleConfigurable? { get }
 }

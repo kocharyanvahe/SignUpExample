@@ -13,6 +13,8 @@ class UserCredentialsViewController: UIViewController, UserCredentialsViewProtoc
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var checkBoxButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var presenter: UserCredentialsPresenter!
     
@@ -22,12 +24,30 @@ class UserCredentialsViewController: UIViewController, UserCredentialsViewProtoc
     }
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
-        
+        if checkBoxButton.isSelected {
+            checkBoxButton.setImage(UIImage(named: "UnselectedCheckBoxImage"), for: .normal)
+        } else {
+            checkBoxButton.setImage(UIImage(named: "SelectedCheckBoxImage"), for: .normal)
+        }
+        checkBoxButton.isSelected = !checkBoxButton.isSelected
+        if isTextFieldsNotEmpty() && checkBoxButton.isSelected {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
         if isTextFieldsNotEmpty() {
             presenter.nextActionWith(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        }
+    }
+    
+    @IBAction func textFieldsEditingChanged(_ sender: UITextField) {
+        if isTextFieldsNotEmpty() {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
         }
     }
     
@@ -42,20 +62,7 @@ class UserCredentialsViewController: UIViewController, UserCredentialsViewProtoc
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UserCredentialsViewController: UITextFieldDelegate {
@@ -74,7 +81,8 @@ extension UserCredentialsViewController: UITextFieldDelegate {
     }
     
     func isTextFieldsNotEmpty() -> Bool {
-        guard let isEmailTextEmpty = emailTextField.text?.isEmpty, let isPasswordTextEmpty = passwordTextField.text?.isEmpty, !isEmailTextEmpty, !isPasswordTextEmpty else {
+        guard let isEmailTextEmpty = emailTextField.text?.isEmpty, let isPasswordTextEmpty = passwordTextField.text?.isEmpty, 
+            !isEmailTextEmpty, !isPasswordTextEmpty, checkBoxButton.isSelected else {
             return false
         }
         return true

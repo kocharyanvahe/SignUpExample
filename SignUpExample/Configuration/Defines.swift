@@ -17,6 +17,7 @@ struct Defines {
         case SuccessLoginText = "You have successfully logged in."
         case SuccessRegistrationText = "Congratulations for registering."
         case PasswordTooShort = "Password too short. Please, try again."
+        case UserExist = "User already exist."
         case ErrorTitle = "ERROR!"
     }
     static let UserExist = "err.user.exists"

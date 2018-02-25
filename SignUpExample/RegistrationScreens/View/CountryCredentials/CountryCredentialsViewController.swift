@@ -17,6 +17,7 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var postalIndexTextField: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var currentUsernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +42,14 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     }
     
     func fillCredentials(email: String, city: String?, country: String?, postalCode: Int?) {
-        
         if let currentCityName = city {
             cityTextField.text = currentCityName
         }
         if let currentPostalCode = postalCode {
             postalIndexTextField.text = "\(currentPostalCode)"
+        }
+        if !email.isEmpty {
+            currentUsernameLabel.text = "Current username: \(email)"
         }
         if let currentCountry = country {
             for i in 0..<countries.count {
@@ -100,8 +103,7 @@ extension CountryCredentialsViewController: UITextFieldDelegate {
             postalIndexTextField.becomeFirstResponder()
         case postalIndexTextField:
             if isFieldsNotEmpty() {
-                presenter.registerActionWith(city: cityTextField.text ?? "", country: countries[pickerView.selectedRow(inComponent: 0)],
-                                                                             postalCode: getIntFromPostalIndexTextField() ?? 0)
+                presenter.registerActionWith(city: cityTextField.text ?? "", country: countries[pickerView.selectedRow(inComponent: 0)], postalCode: getIntFromPostalIndexTextField() ?? 0)
             }
         default:
             break

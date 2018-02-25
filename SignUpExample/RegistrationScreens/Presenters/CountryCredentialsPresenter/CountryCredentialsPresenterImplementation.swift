@@ -49,6 +49,8 @@ final class CountryCredentialsPresenterImplementation: CountryCredentialsPresent
                 }
             case .PasswordTooShort:
                 self.view.showError(message: Defines.Messages.PasswordTooShort.rawValue)
+            case .UserAlreadyExist:
+                self.view.showError(message: Defines.Messages.UserExist.rawValue)
             default:
                 self.view.showError(message: Defines.Messages.UnknownError.rawValue)
             }
