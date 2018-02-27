@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginScreenRouter {
     func openSuccessfullScreen()
+    func backButtonAction()
 }

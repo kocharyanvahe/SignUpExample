@@ -11,4 +11,5 @@ import Foundation
 protocol UserCredentialsPresenter {
     func nextActionWith(email: String, password: String)
     func viewIsReady()
+    func backAction()
 }

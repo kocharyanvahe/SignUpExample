@@ -15,4 +15,8 @@ final class InfoRegistrationPresenterImplementation: InfoRegistrationPresenter {
     func nextAction() {
         router.openUserCredentialsView()
     }
+    
+    func backAction() {
+        router.backButtonAction()
+    }
 }

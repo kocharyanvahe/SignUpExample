@@ -19,4 +19,12 @@ final class UserCredentialsRouterImplementation: UserCredentialsRouter {
                                 transitionType: .push)
         transitionHandler.openModule(with: moduleId) { _ in }
     }
+    
+    func backButtonAction() {
+        guard let transitionHandler = transitionHandler as? TransitionHandler else { return }
+        let moduleId = ModuleId(storyboardId: Storyboard.Registration.storyboardName,
+                                controllerId: Storyboard.Registration.infoRegistrationViewControllerScene.rawValue,
+                                transitionType: .pop)
+        transitionHandler.openModule(with: moduleId) { _ in }
+    }
 }

@@ -27,4 +27,8 @@ final class UserCredentialsPresenterImplementation: UserCredentialsPresenter {
         guard let user = interactor.getUser() else { return }
         view.fillCredentials(email: user.email, password: user.password)
     }
+    
+    func backAction() {
+        router.backButtonAction()
+    }
 }

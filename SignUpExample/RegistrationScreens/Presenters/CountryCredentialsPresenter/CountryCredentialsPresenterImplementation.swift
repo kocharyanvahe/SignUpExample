@@ -66,4 +66,8 @@ final class CountryCredentialsPresenterImplementation: CountryCredentialsPresent
         view.fillCredentials(email: user.email, city: user.city, country: user.country, postalCode: user.postal_code)
         view.checkingRegisterButtonVisibility()
     }
+    
+    func backAction() {
+        router.backButtonAction()
+    }
 }

@@ -26,6 +26,9 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
             presenter.loginAction(with: emailTextField.text ?? "", password: passwordTextField.text ?? "")
         }
     }
+    @IBAction func backTapped(_ sender: UIBarButtonItem) {
+        presenter.backAction()
+    }
     
     func showError(message: String) {
         CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)

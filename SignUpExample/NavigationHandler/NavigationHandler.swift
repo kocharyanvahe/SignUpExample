@@ -12,6 +12,7 @@ import UIKit
 enum TransitionType {
     case modal
     case push
+    case pop
 }
 
 struct ModuleId {
@@ -51,6 +52,20 @@ extension TransitionHandler where Self: UIViewController {
             if let navigationController = self.navigationController,
                 let newViewController = createViewController(with: moduleId) {
                 configureModule(newViewController, completion: completion)
+                navigationController.pushViewController(newViewController, animated: true)
+            }
+            
+        case .pop:
+            if let navigationController = self.navigationController,
+                let newViewController = createViewController(with: moduleId) {
+                configureModule(newViewController, completion: completion)
+                let transition = CATransition()
+                transition.duration = 0.3
+                transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+                transition.type = kCATransitionPush
+                transition.subtype = kCATransitionFromLeft
+                transition.fillMode = kCAFillModeRemoved
+                navigationController.view.layer.add(transition, forKey: nil)
                 navigationController.pushViewController(newViewController, animated: true)
             }
         }

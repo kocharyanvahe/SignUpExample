@@ -17,10 +17,21 @@ class InfoRegistrationViewController: UIViewController, InfoRegistrationViewProt
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
+        let backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped(_:)))
+        self.navigationItem.leftBarButtonItem = backBarButtonItem
+        
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
         presenter.nextAction()
+    }
+    
+    @objc func backTapped(_ sender: UIBarButtonItem) {
+        presenter.backAction()
     }
     
     override func didReceiveMemoryWarning() {

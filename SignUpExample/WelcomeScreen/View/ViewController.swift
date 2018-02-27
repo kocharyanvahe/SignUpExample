@@ -14,6 +14,7 @@ class ViewController: UIViewController, WelcomeScreenViewProtocol, TransitionHan
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {

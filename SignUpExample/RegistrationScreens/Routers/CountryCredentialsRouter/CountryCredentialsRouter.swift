@@ -10,5 +10,5 @@ import Foundation
 
 protocol CountryCredentialsRouter {
     func openSuccessView()
-//    func openUserCredentialsView()
+    func backButtonAction()
 }

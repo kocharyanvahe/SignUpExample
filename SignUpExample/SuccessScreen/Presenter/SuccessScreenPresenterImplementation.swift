@@ -18,4 +18,7 @@ final class SuccessScreenPresenterImplementation: SuccessScreenPresenter {
         configure = configuration
     }
     
+    func backAction() {
+        router.backButtonAction()
+    }
 }

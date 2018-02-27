@@ -10,4 +10,5 @@ import Foundation
 
 protocol InfoRegistrationPresenter {
     func nextAction()
+    func backAction()
 }

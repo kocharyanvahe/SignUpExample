@@ -10,4 +10,5 @@ import Foundation
 
 protocol InfoRegistrationRouter {
     func openUserCredentialsView()
+    func backButtonAction()
 }

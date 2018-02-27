@@ -47,4 +47,8 @@ final class LoginScreenPresenterImplementation: LoginScreenPresenter {
             }
         }
     }
+    
+    func backAction() {
+        router.backButtonAction()
+    }
 }

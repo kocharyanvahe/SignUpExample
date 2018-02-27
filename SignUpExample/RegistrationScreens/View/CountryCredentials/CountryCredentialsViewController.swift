@@ -23,6 +23,7 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     override func viewDidLoad() {
         super.viewDidLoad()
         viewIsReady()
+        setup()
     }
 
     @IBAction func registerTapped(_ sender: UIButton) {
@@ -44,6 +45,15 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     
     func viewIsReady() {
         presenter.viewIsReady()
+    }
+    
+    private func setup() {
+        let backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped(_:)))
+        self.navigationItem.leftBarButtonItem = backBarButtonItem
+    }
+    
+    @objc func backTapped(_ sender: UIBarButtonItem) {
+        presenter.backAction()
     }
     
     func showError(message: String) {

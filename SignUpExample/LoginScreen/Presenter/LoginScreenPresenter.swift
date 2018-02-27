@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginScreenPresenter {
     func loginAction(with email: String, password: String)
+    func backAction()
 }

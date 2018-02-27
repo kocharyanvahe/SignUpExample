@@ -21,6 +21,7 @@ class UserCredentialsViewController: UIViewController, UserCredentialsViewProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         viewIsReady()
+        setup()
     }
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
@@ -58,6 +59,15 @@ class UserCredentialsViewController: UIViewController, UserCredentialsViewProtoc
     func fillCredentials(email: String, password: String) {
         emailTextField.text = email
         passwordTextField.text = password
+    }
+    
+    private func setup() {
+        let backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped(_:)))
+        self.navigationItem.leftBarButtonItem = backBarButtonItem
+    }
+    
+    @objc func backTapped(_ sender: UIBarButtonItem) {
+        presenter.backAction()
     }
     
     override func didReceiveMemoryWarning() {

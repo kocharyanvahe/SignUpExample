@@ -20,4 +20,12 @@ final class CountryCredentialsRouterImplementation: CountryCredentialsRouter {
             configure.configure(with: SuccessScreenSetupConfiguration(config: .SuccessRegistration))
         }
     }
+    
+    func backButtonAction() {
+        guard let transitionHandler = transitionHandler as? TransitionHandler else { return }
+        let moduleId = ModuleId(storyboardId: Storyboard.Registration.storyboardName,
+                                controllerId: Storyboard.Registration.userCredentialsViewControllerScene.rawValue,
+                                transitionType: .pop)
+        transitionHandler.openModule(with: moduleId) { _ in }
+    }
 }

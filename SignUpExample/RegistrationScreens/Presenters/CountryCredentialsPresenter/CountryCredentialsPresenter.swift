@@ -11,4 +11,5 @@ import Foundation
 protocol CountryCredentialsPresenter {
     func registerActionWith(city: String, country: String, postalCode: Int)
     func viewIsReady()
+    func backAction()
 }
