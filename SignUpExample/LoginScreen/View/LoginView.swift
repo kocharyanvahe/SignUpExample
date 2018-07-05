@@ -31,7 +31,7 @@ class LoginView: UIViewController, LoginScreenViewProtocol, TransitionHandler {
     }
     
     func showError(message: String) {
-        CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
+        CRNotifications.showNotification(type: CRNotifications.error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
     }
     
     @IBAction func textFieldsEditingChanged(_ sender: UITextField) {

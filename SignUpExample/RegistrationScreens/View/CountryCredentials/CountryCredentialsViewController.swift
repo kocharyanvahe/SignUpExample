@@ -57,7 +57,7 @@ class CountryCredentialsViewController: UIViewController, CountryCredentialsView
     }
     
     func showError(message: String) {
-        CRNotifications.showNotification(type: .error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
+        CRNotifications.showNotification(type: CRNotifications.error, title: Defines.Messages.ErrorTitle.rawValue, message: message, dismissDelay: 1)
     }
     
     func fillCredentials(email: String, city: String?, country: String?, postalCode: Int?) {

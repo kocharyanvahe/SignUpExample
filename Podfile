@@ -6,7 +6,7 @@ target 'SignUpExample' do
   use_frameworks!
 
   # Pods for SignUpExample
-  pod 'Alamofire', '~> 4.6'
+  pod 'Alamofire', '~> 4.7'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
   pod ‘CRNotifications’
